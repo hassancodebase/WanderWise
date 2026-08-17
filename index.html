@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WanderWise Travel Recommendations</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="travel_recommendation.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a
+        class="brand"
+        href="travel_recommendation.html"
+        aria-label="WanderWise home"
+        ><span>✈</span> WanderWise</a
+      >
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <form id="searchForm" class="search-box">
+        <label class="sr-only" for="searchInput">Search recommendations</label>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="beach, temple, or country..."
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+        <button type="button" id="clearBtn" class="secondary">Clear</button>
+      </form>
+    </nav>
+
+    <div class="social-sidebar" aria-label="Social media links">
+      <a href="#" aria-label="Twitter / X">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+
+      <a href="#" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="#" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="#" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">TRAVEL • DISCOVER • EXPERIENCE</p>
+          <h1>Find your next<br /><span>unforgettable journey.</span></h1>
+          <p>
+            Explore beautiful beaches, remarkable temples, and inspiring
+            countries with WanderWise. Search above to discover handpicked
+            destinations from our travel recommendation data.
+          </p>
+          <div class="hero-actions">
+            <a class="cta" href="#recommendations">Explore recommendations ↓</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="recommendations" class="results-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR DISCOVERIES</p>
+            <h2>Travel recommendations</h2>
+          </div>
+          <p id="resultMessage" class="result-message">
+            Search for <strong>beach</strong>, <strong>temple</strong>, or
+            <strong>country</strong>.
+          </p>
+        </div>
+        <div id="results" class="results-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="about" class="info-section">
+        <div>
+          <p class="eyebrow">ABOUT US</p>
+          <h2>Travel made more inspiring.</h2>
+        </div>
+        <div class="info-copy">
+          <p>
+            WanderWise is a simple travel discovery experience built to help
+            curious travelers find memorable places faster. Browse
+            recommendations from our supplied travel dataset and let your next
+            destination spark your imagination.
+          </p>
+          <div class="team">
+            <div>
+              <strong>Ali Raza</strong><span>Founder & Travel Curator</span>
+            </div>
+            <div>
+              <strong>Yaseen Malik</strong><span>Destination Researcher</span>
+            </div>
+            <div>
+              <strong>Hoorain Iqbal</strong><span>Experience Designer</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div>
+          <p class="eyebrow">CONTACT US</p>
+          <h2>Let's plan your next idea.</h2>
+          <p>
+            Have a destination in mind or want to share feedback? Send us a
+            message.
+          </p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input required type="text" name="name" placeholder="Your name" />
+          <input
+            required
+            type="email"
+            name="email"
+            placeholder="Email address"
+          />
+          <textarea
+            required
+            name="message"
+            rows="5"
+            placeholder="Your message"
+          ></textarea>
+          <button type="submit">Send message</button>
+          <p id="contactStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      © 2026 WanderWise · Travel recommendations for curious explorers.
+    </footer>
+    <script src="travel_recommendation.js"></script>
+  </body>
+</html>
